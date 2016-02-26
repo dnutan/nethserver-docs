@@ -66,11 +66,10 @@ modules are available under
 :file:`/usr/share/perl5/vendor_perl/esmith/`. For instance,
 
 NethServer::Password
-
   Secret generation and persistent storage, under
   :file:`/var/lib/nethserver/secrets/`.
 
-NethServer::Service 
+NethServer::Service
   Service manager agnostic API. No matter if a service is managed by
   systemd, Upstart or SysV init script: use this API to gain control
   over it.
@@ -102,7 +101,7 @@ signal an event to regenerate the various server application
 configuration files according to the new configuration.
 
 **Note:** The user interface must never modify configuration files
-directly. Neither should to the administrator from command line.
+directly. Neither should do the administrator from command line.
 
 Each event is associated with a list of actions which should be
 performed when the event occurs and is defined as a subdirectory of
@@ -147,8 +146,8 @@ The ``services2adjust/`` directory contains links mapping a specific
 service to the action to perform on that service. For example, if
 signalling the event in question requires that the ntpd service is
 restarted, you simply include the link ntpd -> restart in the
-``services2adjust`` directory. The implicit action services2adjust would
-then restart the ntpd service. As an example, the ``services2adjust/``
+``services2adjust`` directory. The implicit action *services2adjust* would
+then restart the *ntpd* service. As an example, the ``services2adjust/``
 directory for the ``nethserver-httpd-update`` event is shown below::
 
   # ls> l /etc/e-smith/events/nethserver-httpd-update/services2adjust/
@@ -161,7 +160,7 @@ templates2expand
 The ``templates2expand/`` directory contains a list of the configuration
 files which need to be regenerated from their templates. This list
 consists of a collection of empty files with the same file name as the
-configuration file to be expanded and in a heirarchy mirroring their
+configuration file to be expanded and in a hierarchy mirroring their
 location on the system. For example, to expand templates for the
 ``/etc/samba/smb.conf`` configuration file, simply include the empty
 file ``etc/samba/smb.conf`` in the ``templates2expand/`` directory of
