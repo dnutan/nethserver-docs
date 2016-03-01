@@ -21,7 +21,7 @@ Currently the following roles are available:
 The differences between these roles concern `where` user database is
 stored and `which hosts` can access it.  The user database contains
 the list of users of the system, their passwords, group membership and
-other informations.
+other information.
 
 Workstation
 
@@ -79,8 +79,8 @@ and hosts accounts are stored. To setup a Windows network where
    select :guilabel:`Primary Domain Controller`, then
    :guilabel:`SUBMIT` the change.
    
-   The Domain name by default is assumed to be the second domain part
-   of the host name in capital letters (e.g. if the FQDN server host
+   The Domain name by default is assumed to be the rightmost part
+   of the FQDN in capital letters and without a suffix (e.g. if the FQDN server host
    name is ``server.example.com`` the default domain name will be
    ``EXAMPLE``. If the default does not fit your needs, choose a
    simple name respecting the rules:
@@ -92,7 +92,7 @@ and hosts accounts are stored. To setup a Windows network where
 
    * only capital letters.
 
-   For more informations refer to Microsoft Naming conventions [#MS909264]_.
+   For more information refer to Microsoft Naming conventions [#MS909264]_.
 
 2. For each workstation of the Windows network, join the new domain.
    This step requires privileged credentials.  In |product|, members
